@@ -3,11 +3,6 @@
 @tailwind utilities;
 
 body {
-  @apply bg-slate-50 text-slate-950;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    @apply bg-slate-950 text-slate-50;
-  }
+  @apply font-sans;
+  @apply bg-slate-950 text-slate-50;
 }
