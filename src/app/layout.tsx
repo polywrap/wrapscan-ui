@@ -1,12 +1,53 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import Navbar from "./navbar";
 import { ReactNode } from "react";
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
+const colton = localFont({
+  src: [
+    {
+      path: "../assets/fonts/HDColton-Regular.woff",
+      style: "normal",
+      weight: "400",
+    },
+    {
+      path: "../assets/fonts/HDColton-Bold.woff",
+      style: "normal",
+      weight: "700",
+    },
+    {
+      path: "../assets/fonts/HDColton-RegularItalic.woff",
+      style: "italic",
+      weight: "400",
+    },
+    {
+      path: "../assets/fonts/HDColton-BoldItalic.woff",
+      style: "italic",
+      weight: "700",
+    },
+  ],
+  variable: "--font-colton",
+});
+
+const coltonXWide = localFont({
+  src: [
+    {
+      path: "../assets/fonts/HDColton-XWideRegular.woff",
+      style: "normal",
+      weight: "400",
+    },
+    {
+      path: "../assets/fonts/HDColton-XWideBold.woff",
+      style: "normal",
+      weight: "700",
+    },
+    {
+      path: "../assets/fonts/HDColton-XWideBoldItalic.woff",
+      style: "italic",
+      weight: "700",
+    },
+  ],
+  variable: "--font-colton-xwide",
 });
 
 export const metadata = {
@@ -17,7 +58,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable}`}>
+      <body className={`${colton.variable} ${coltonXWide.variable}`}>
         <Navbar></Navbar>
         {children}
       </body>
