@@ -58,7 +58,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-y-scroll">
       <body
         className={`${colton.variable} ${coltonXWide.variable} bg-polywrap-iris-950`}
       >
