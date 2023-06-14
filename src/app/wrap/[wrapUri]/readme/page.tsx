@@ -1,39 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import { readme } from "./readme";
-import { PropsWithChildren } from "react";
-
-function InfoLabel(props: PropsWithChildren) {
-  return (
-    <label className="font-bold text-polywrap-gray-200">{props.children}</label>
-  );
-}
-
-function InfoText(props: PropsWithChildren) {
-  return <p className="text-polywrap-gray-50">{props.children}</p>;
-}
-
-function WrapInformationWidget() {
-  return (
-    <div className="flex flex-col gap-6">
-      <div>
-        <InfoLabel>Query URL</InfoLabel>
-        <InfoText>/wrap/FDD65mUueJCg</InfoText>
-      </div>
-      <div>
-        <InfoLabel>Repository</InfoLabel>
-        <InfoText>github.com/polywrap/uniswap</InfoText>
-      </div>
-      <div>
-        <InfoLabel>Version</InfoLabel>
-        <InfoText>1.2.14</InfoText>
-      </div>
-      <div>
-        <InfoLabel>Size</InfoLabel>
-        <InfoText>450 kB</InfoText>
-      </div>
-    </div>
-  );
-}
+import WrapInformationWidget from "@/components/wrap/wrap-information-widget";
 
 // Tailwind has a really nice base typography style which can be activated with the `prose` class
 // We can provide our own typography styling by simply editing the typography plugin:
@@ -45,7 +12,7 @@ export default function Readme() {
       <ReactMarkdown className="prose prose-invert max-w-none">
         {readme}
       </ReactMarkdown>
-      <div className="basis-80 grow-0 shrink-0">
+      <div className="shrink-0 grow-0 basis-80">
         <WrapInformationWidget></WrapInformationWidget>
       </div>
     </div>
