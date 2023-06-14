@@ -19,8 +19,6 @@ const ActiveLink = ({
   const [computedClassName, setComputedClassName] = useState(className);
 
   useEffect(() => {
-    // Check if the router fields are updated client-side
-
     const newClassName =
       segment === props.href
         ? `${className} ${activeClassName}`.trim()

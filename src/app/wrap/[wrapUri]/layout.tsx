@@ -1,4 +1,4 @@
-import Link, { LinkProps } from "next/link";
+import { LinkProps } from "next/link";
 import { PropsWithChildren, ReactNode } from "react";
 import ActiveLink from "./active-link";
 
@@ -32,7 +32,7 @@ export default function WrapLayout({
           V3 smart contracts in a programming language environment.
         </p>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-12">
         <div className="flex gap-8 border-b border-polywrap-iris-800">
           <WrapNavLink href="readme">Readme</WrapNavLink>
           <WrapNavLink href="schema">Schema</WrapNavLink>

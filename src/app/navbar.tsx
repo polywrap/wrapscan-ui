@@ -8,9 +8,7 @@ export default function Navbar() {
         <PolywrapLogo></PolywrapLogo>
         <div className="flex flex-col">
           <span className="font-display font-bold">wrapscan</span>
-          <span className="text-xxs text-polywrap-gray-200">
-            by polywrap
-          </span>
+          <span className="text-xxs text-polywrap-gray-200">by polywrap</span>
         </div>
       </Link>
       <div className="flex items-center gap-6">

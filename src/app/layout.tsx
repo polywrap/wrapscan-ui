@@ -2,6 +2,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import Navbar from "./navbar";
 import { ReactNode } from "react";
+import Footer from "./footer";
 
 const colton = localFont({
   src: [
@@ -58,9 +59,12 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${colton.variable} ${coltonXWide.variable} bg-polywrap-iris-950`}>
+      <body
+        className={`${colton.variable} ${coltonXWide.variable} bg-polywrap-iris-950`}
+      >
         <Navbar></Navbar>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );
