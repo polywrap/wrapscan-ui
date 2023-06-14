@@ -1,4 +1,4 @@
-import DefaultWrapLogo from "@/shared/default-wrap-logo";
+import DefaultWrapLogo from "@/components/default-wrap-logo";
 import Image from "next/image";
 import Link from "next/link";
 

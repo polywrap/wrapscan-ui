@@ -1,6 +1,6 @@
 import { LinkProps } from "next/link";
 import { PropsWithChildren, ReactNode } from "react";
-import ActiveLink from "./active-link";
+import ActiveLink from "../../../components/active-link";
 
 type WrapNavLinkProps = PropsWithChildren<LinkProps>;
 

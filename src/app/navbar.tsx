@@ -1,5 +1,5 @@
 import Link from "next/link";
-import PolywrapLogo from "@/shared/polywrap-logo";
+import PolywrapLogo from "@/components/polywrap-logo";
 
 export default function Navbar() {
   return (
