@@ -23,9 +23,6 @@ export default function Navbar() {
         >
           Support
         </Link>
-        <Link href="/wrap/test-wrap/readme" className="hover:underline">
-          Sample wrap
-        </Link>
       </div>
     </div>
   );

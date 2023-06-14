@@ -1,4 +1,4 @@
-import logomark from "@/assets/Logomark.png";
+import logomark from "@/assets/logomark.png";
 import Image from "next/image";
 
 export default function PolywrapLogo() {
