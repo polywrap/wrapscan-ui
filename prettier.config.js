@@ -12,5 +12,6 @@ module.exports = {
   trailingComma: "es5",
   bracketSpacing: true,
   arrowParens: "always",
-  endOfLine: "auto"
+  endOfLine: "auto",
+  tailwindAttributes: ['activeClassName'],
 }

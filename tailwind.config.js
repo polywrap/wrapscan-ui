@@ -13,19 +13,17 @@ module.exports = {
         sans: ["var(--font-colton)"],
         display: ["var(--font-colton-xwide)"]
       },
+      fontSize: {
+        xxs: "0.5rem"
+      },
       colors: {
+        // Polywrap's "Iris" colors
+        // only set ones used within the app right now, as we might want to align them with CIELUV and WCAG
         "polywrap-iris": {
           950: "#06071a",
-          900: "#111755",
-          800: "#1c257a",
-          700: "#2834a1",
-          600: "#3443ca",
-          500: "#5b65df",
-          400: "#8288e8",
-          300: "#9ea2ed",
-          200: "#c0c3f4",
-          100: "#e3e4fa",
-          50: "#f9f9fe",
+          800: "#222454",
+          600: "#343A80",
+          500: "#5361F8",
         },
         "polywrap-gray": {
           900: "#1f1f1f",

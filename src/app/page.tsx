@@ -36,7 +36,7 @@ function WrapListItem(props: WrapListItemProps) {
   return (
     <Link
       href={`/wrap/${wrap.uri}/readme`}
-      className="flex gap-6 rounded-2xl border border-polywrap-iris-600 bg-polywrap-card p-8 hover:bg-polywrap-card-hover hover:border-polywrap-iris-500"
+      className="flex gap-6 rounded-2xl border border-polywrap-iris-600 bg-polywrap-card p-8 hover:border-polywrap-iris-500 hover:bg-polywrap-card-hover"
     >
       <div className="flex items-center justify-center">
         {wrap.logoUrl && wrap.logoUrl.length ? (
@@ -55,7 +55,7 @@ function WrapListItem(props: WrapListItemProps) {
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-screen-xl px-4 pt-8">
+    <main className="mx-auto max-w-screen-xl px-4 py-8">
       <div className="flex flex-col gap-6">
         {wraps.map((wrap, idx) => {
           return <WrapListItem wrap={wrap} key={idx}></WrapListItem>;
