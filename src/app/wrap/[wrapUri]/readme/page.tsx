@@ -45,7 +45,7 @@ export default function Readme() {
       <ReactMarkdown className="prose prose-invert max-w-none">
         {readme}
       </ReactMarkdown>
-      <div className="w-[360px]">
+      <div className="basis-80 grow-0 shrink-0">
         <WrapInformationWidget></WrapInformationWidget>
       </div>
     </div>
