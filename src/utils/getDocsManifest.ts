@@ -1,33 +1,18 @@
-import { PolywrapClient, WrapErrorCode } from "@polywrap/client-js";
 import { cache } from "react";
 import {
   DocsManifest,
   deserializeDocsManifest,
 } from "@polywrap/polywrap-manifest-types-js";
-import { getPolywrapClient } from "./getPolywrapClient";
+import { getWrapFile } from "./getWrapFile";
 
 export const getDocsManifest = cache(
   async (wrapUri: string): Promise<DocsManifest | undefined> => {
-    const client = new PolywrapClient();
-    console.log(`Fetching ${wrapUri}/docs`)
+    const docsManifest = await getWrapFile(wrapUri, "docs/polywrap.docs.json");
 
-    const docsManifestResult = await client.getFile(wrapUri, {
-      path: "docs/polywrap.docs.json",
-      encoding: "utf-8",
-    });
-
-    if (docsManifestResult.ok) {
-      const docsManifestString = docsManifestResult.value.toString();
-      console.log(`Returning ${wrapUri}/docs`)
-
-      return deserializeDocsManifest(docsManifestString);
-    } else if (
-      docsManifestResult.error?.code === WrapErrorCode.CLIENT_GET_FILE_ERROR
-    ) {
-      return undefined;
+    if (docsManifest) {
+      return deserializeDocsManifest(docsManifest);
     }
 
-    throw `Error while fetching docs manifest for ${wrapUri}:
-${JSON.stringify(docsManifestResult.error)}`;
+    return undefined;
   }
 );

@@ -1,33 +1,59 @@
+import Link from "next/link";
 import { PropsWithChildren } from "react";
 
 function InfoLabel(props: PropsWithChildren) {
   return (
-    <label className="font-bold text-polywrap-gray-200">{props.children}</label>
+    <label className="break-all font-bold text-polywrap-gray-200">
+      {props.children}
+    </label>
   );
 }
 
 function InfoText(props: PropsWithChildren) {
-  return <p className="text-polywrap-gray-50">{props.children}</p>;
+  return <p className="break-all text-polywrap-gray-50">{props.children}</p>;
 }
 
-export default function WrapInformationWidget() {
+type WrapInformationWidgetProps = {
+  url: string;
+  repositoryUrl?: string;
+  websiteUrl?: string;
+  version: string;
+};
+
+export default function WrapInformationWidget(
+  props: WrapInformationWidgetProps
+) {
+  const { url, repositoryUrl, websiteUrl: homepageUrl, version } = props;
+
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <InfoLabel>Query URL</InfoLabel>
-        <InfoText>/wrap/FDD65mUueJCg</InfoText>
+        <InfoLabel>Wrap URL</InfoLabel>
+        <InfoText>{url}</InfoText>
       </div>
-      <div>
-        <InfoLabel>Repository</InfoLabel>
-        <InfoText>github.com/polywrap/uniswap</InfoText>
-      </div>
+      {homepageUrl && (
+        <div>
+          <InfoLabel>Website</InfoLabel>
+          <InfoText>
+            <Link href={homepageUrl} target="_blank">
+              {homepageUrl}
+            </Link>
+          </InfoText>
+        </div>
+      )}
+      {repositoryUrl && (
+        <div>
+          <InfoLabel>Repository</InfoLabel>
+          <InfoText>
+            <Link href={repositoryUrl} target="_blank">
+              {repositoryUrl}
+            </Link>
+          </InfoText>
+        </div>
+      )}
       <div>
         <InfoLabel>Version</InfoLabel>
-        <InfoText>1.2.14</InfoText>
-      </div>
-      <div>
-        <InfoLabel>Size</InfoLabel>
-        <InfoText>450 kB</InfoText>
+        <InfoText>{version}</InfoText>
       </div>
     </div>
   );

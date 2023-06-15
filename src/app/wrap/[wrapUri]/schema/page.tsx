@@ -1,17 +1,22 @@
 import WrapInformationWidget from "@/components/wrap/wrap-information-widget";
 import { getWrapManifest } from "@/utils/getWrapManifest";
-import { use } from "react";
 import WrapSchemaRenderer from "@/components/wrap/wrap-schema-renderer";
 import { decodeWrapUri } from "@/utils/wrapUri";
 import { renderSchema } from "@polywrap/schema-compose";
+import { getDocsManifest } from "@/utils/getDocsManifest";
 
-export default function Schema({ params }: { params: { wrapUri: string } }) {
+export default async function Schema({
+  params,
+}: {
+  params: { wrapUri: string };
+}) {
   const { wrapUri } = params;
   const wrapUriDecoded = decodeWrapUri(wrapUri);
 
-  const result = use(getWrapManifest(wrapUriDecoded));
+  const wrapManifest = await getWrapManifest(wrapUriDecoded);
+  const docsManifest = await getDocsManifest(wrapUriDecoded);
 
-  const schema = renderSchema(result.abi, false);
+  const schema = renderSchema(wrapManifest.abi, false);
 
   return (
     <div className="flex gap-12">
@@ -19,7 +24,12 @@ export default function Schema({ params }: { params: { wrapUri: string } }) {
         <WrapSchemaRenderer schema={schema.trimStart()}></WrapSchemaRenderer>
       </div>
       <div className="shrink-0 grow-0 basis-80">
-        <WrapInformationWidget></WrapInformationWidget>
+        <WrapInformationWidget
+          url={wrapUriDecoded}
+          version={wrapManifest.version}
+          websiteUrl={docsManifest?.homePage}
+          repositoryUrl={docsManifest?.github}
+        ></WrapInformationWidget>
       </div>
     </div>
   );
