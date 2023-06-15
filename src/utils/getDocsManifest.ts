@@ -9,7 +9,8 @@ import { getPolywrapClient } from "./getPolywrapClient";
 export const getDocsManifest = cache(
   async (wrapUri: string): Promise<DocsManifest | undefined> => {
     const client = new PolywrapClient();
-    const client2 = getPolywrapClient();
+    console.log(`Fetching ${wrapUri}/docs`)
+
     const docsManifestResult = await client.getFile(wrapUri, {
       path: "docs/polywrap.docs.json",
       encoding: "utf-8",
@@ -17,6 +18,7 @@ export const getDocsManifest = cache(
 
     if (docsManifestResult.ok) {
       const docsManifestString = docsManifestResult.value.toString();
+      console.log(`Returning ${wrapUri}/docs`)
 
       return deserializeDocsManifest(docsManifestString);
     } else if (

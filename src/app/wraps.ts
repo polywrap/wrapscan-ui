@@ -21,4 +21,9 @@ export const wraps: WrapHomepageItem[] = [
     description: "Description of this wrap.",
     uri: "ipfs/QmNxY6Zm7DxzTofHiWkj4ZogzfPgJmGLvucWdR1iEyR6Nz",
   },
+  {
+    name: "Sample",
+    description: "A sample wrap.",
+    uri: "http/http://localhost:3000/samplewrap",
+  },
 ];

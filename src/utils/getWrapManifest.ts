@@ -3,6 +3,7 @@ import { cache } from "react";
 
 export const getWrapManifest = cache(async (wrapUri: string) => {
   const client = new PolywrapClient();
+
   const manifestResult = await client.getManifest(wrapUri);
 
   if (manifestResult.ok) {
