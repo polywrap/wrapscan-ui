@@ -7,23 +7,28 @@ export type WrapHomepageItem = {
 
 export const wraps: WrapHomepageItem[] = [
   {
-    name: "Ethers core",
-    description: "Description of this wrap.",
-    uri: "ipfs/QmNkqWQuTAiZaLSR3VE53uazuAEqZevv1XQtvAYahuyJ6d",
+    name: "Ethereum",
+    description: "Description",
+    uri: "ipfs/QmS4Z679ZE8WwZSoYB8w9gDSERHAoWG1fX94oqdWpfpDq3",
   },
   {
-    name: "Ethers utils",
-    description: "Description of this wrap.",
-    uri: "ipfs/QmaHYcvpM3mWVY7KSi4kmEKP26JhE3SWYitKCUaLfJQguy",
+    name: "Ethereum provider",
+    description: "Description",
+    uri: "ipfs/QmPeHGkHn9Fwo1Drh39SGNfW3bBNSdAg14hcHYwux2oWrc",
   },
   {
     name: "ENS",
-    description: "Description of this wrap.",
-    uri: "ipfs/QmNxY6Zm7DxzTofHiWkj4ZogzfPgJmGLvucWdR1iEyR6Nz",
+    description: "Description",
+    uri: "ipfs/QmWG8NJnvGMCosxaUWuRna33MSDR331rByGTdy4EDsVjNL",
   },
   {
-    name: "Sample",
-    description: "A sample wrap.",
-    uri: "http/http://localhost:3000/samplewrap",
+    name: "IPFS",
+    description: "Asdf",
+    uri: "ipfs/QmWC71YkXywceZVqwrDQ6BVYuu2FNnSVReQdp925EkMPqu",
+  },
+  {
+    name: "Uniswap V3",
+    description: "Asdf",
+    uri: "ipfs/QmbAgd4ccxYcbPCeDBb67SFybMZiNKQdCt32EzCEi5euh3",
   },
 ];
