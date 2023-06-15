@@ -1,3 +1,5 @@
+"use client";
+
 import ReactMarkdown from "react-markdown";
 import { readme } from "./readme";
 import WrapInformationWidget from "@/components/wrap/wrap-information-widget";

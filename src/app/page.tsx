@@ -1,31 +1,8 @@
 import DefaultWrapLogo from "@/components/default-wrap-logo";
 import Image from "next/image";
 import Link from "next/link";
-
-type WrapHomepageItem = {
-  name: string;
-  description: string;
-  uri: string;
-  logoUrl?: string;
-};
-
-const wraps: WrapHomepageItem[] = [
-  {
-    name: "Test 1",
-    description: "Description of this wrap.",
-    uri: "asdf1",
-  },
-  {
-    name: "Test 2",
-    description: "Description of this wrap.",
-    uri: "asdf2",
-  },
-  {
-    name: "Test 3",
-    description: "Description of this wrap.",
-    uri: "asdf3",
-  },
-];
+import { WrapHomepageItem, wraps } from "./wraps";
+import { encodeWrapUri } from "@/utils/wrapUri";
 
 type WrapListItemProps = {
   wrap: WrapHomepageItem;
@@ -35,7 +12,7 @@ function WrapListItem(props: WrapListItemProps) {
   const { wrap } = props;
   return (
     <Link
-      href={`/wrap/${wrap.uri}/readme`}
+      href={`/wrap/${encodeWrapUri(wrap.uri)}/readme`}
       className="flex gap-6 rounded-2xl border border-polywrap-iris-600 bg-polywrap-card p-8 hover:border-polywrap-iris-500 hover:bg-polywrap-card-hover"
     >
       <div className="flex items-center justify-center">

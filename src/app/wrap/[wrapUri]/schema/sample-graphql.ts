@@ -1,4 +1,4 @@
-export const sampleGraphql =  `type Module implements UriResolver_Module @imports(
+export const sampleGraphql = `type Module implements UriResolver_Module @imports(
   types: [
     "UriResolver_Module",
     "UriResolver_MaybeUriOrManifest",
@@ -407,4 +407,4 @@ type ENS_CreateSubdomainInOpenDomainAndSetContentHashResponse implements ENS_Cre
 
 ### Imported Envs START ###
 
-### Imported Envs END ###`
+### Imported Envs END ###`;
