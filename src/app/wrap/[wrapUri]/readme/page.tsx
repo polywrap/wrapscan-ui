@@ -5,6 +5,10 @@ import { decodeWrapUri } from "@/utils/wrapUri";
 import { getWrapFile } from "@/utils/getWrapFile";
 import { getWrapManifest } from "@/utils/getWrapManifest";
 import { defaultReadme } from "./default-readme";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { CodeProps } from "react-markdown/lib/ast-to-react";
+import { irBlack as syntax } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import MarkdownRenderer from "./markdown-renderer";
 
 // Tailwind has a really nice base typography style which can be activated with the `prose` class
 // We can provide our own typography styling by simply editing the typography plugin:
@@ -26,11 +30,9 @@ export default async function Readme({
   }
 
   return (
-    <div className="flex gap-12">
-      <div className="grow">
-        <ReactMarkdown className="prose prose-invert max-w-none">
-          {readme ?? defaultReadme}
-        </ReactMarkdown>
+    <div className="flex justify-between gap-12">
+      <div className="max-w-full overflow-hidden">
+        <MarkdownRenderer readme={readme ?? defaultReadme}></MarkdownRenderer>
       </div>
       <div className="hidden shrink-0 grow-0 basis-80 md:block">
         <WrapInformationWidget

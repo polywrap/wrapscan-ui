@@ -29,6 +29,6 @@ export const wraps: WrapHomepageItem[] = [
   {
     name: "pileks-template-wasm-as",
     description: "A sample wrap.",
-    uri: "ipfs/QmTb8db7K6fan8T4eXFhQghSbB9TJpUBoU8aQwJcuiJyEt",
+    uri: "ipfs/QmUcCrLdUt1VsyjXMCxgpGaeCEd6gzqUW47C2x4yZtZTzi",
   },
 ];
