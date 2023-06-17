@@ -6,8 +6,6 @@ import { decodeWrapUri } from "@/utils/wrapUri";
 import { getWrapManifest } from "@/utils/getWrapManifest";
 import { getDocsManifest } from "@/utils/getDocsManifest";
 
-export const revalidate = 3600; // Revalidate cache every hour
-
 type WrapNavLinkProps = PropsWithChildren<LinkProps>;
 
 function WrapNavLink(props: WrapNavLinkProps) {
@@ -43,12 +41,11 @@ export default async function WrapLayout({
     <div className="mx-auto flex max-w-screen-xl flex-col gap-16 px-4 pt-8">
       <div className="flex flex-col gap-6">
         <h1 className="text-4xl font-bold text-polywrap-gray-50">
-          {docsManifest ? docsManifest.title : wrapManifest.name}
+          {wrapManifest.name}
         </h1>
-        <p className="text-polywrap-gray-200">
-          Provides abstractions to assist you with interacting with the Uniswap
-          V3 smart contracts in a programming language environment.
-        </p>
+        {docsManifest && docsManifest.description && (
+          <p className="text-polywrap-gray-200">{docsManifest.description}</p>
+        )}
       </div>
       <div className="flex flex-col gap-12">
         <div className="flex gap-8 border-b border-polywrap-iris-800">

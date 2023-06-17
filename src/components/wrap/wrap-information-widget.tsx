@@ -35,7 +35,11 @@ export default function WrapInformationWidget(
         <div>
           <InfoLabel>Website</InfoLabel>
           <InfoText>
-            <Link href={homepageUrl} target="_blank">
+            <Link
+              href={homepageUrl}
+              target="_blank"
+              className="hover:underline"
+            >
               {homepageUrl}
             </Link>
           </InfoText>
@@ -45,7 +49,11 @@ export default function WrapInformationWidget(
         <div>
           <InfoLabel>Repository</InfoLabel>
           <InfoText>
-            <Link href={repositoryUrl} target="_blank">
+            <Link
+              href={repositoryUrl}
+              target="_blank"
+              className="hover:underline"
+            >
               {repositoryUrl}
             </Link>
           </InfoText>

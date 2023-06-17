@@ -7,28 +7,28 @@ export type WrapHomepageItem = {
 
 export const wraps: WrapHomepageItem[] = [
   {
-    name: "Ethereum",
+    name: "ethereum-wrapper",
     description: "Description",
     uri: "ipfs/QmS4Z679ZE8WwZSoYB8w9gDSERHAoWG1fX94oqdWpfpDq3",
   },
   {
-    name: "Ethereum provider",
-    description: "Description",
-    uri: "ipfs/QmPeHGkHn9Fwo1Drh39SGNfW3bBNSdAg14hcHYwux2oWrc",
-  },
-  {
-    name: "ENS",
+    name: "ens",
     description: "Description",
     uri: "ipfs/QmWG8NJnvGMCosxaUWuRna33MSDR331rByGTdy4EDsVjNL",
   },
   {
-    name: "IPFS",
+    name: "ipfs-http-client-as",
     description: "Asdf",
     uri: "ipfs/QmWC71YkXywceZVqwrDQ6BVYuu2FNnSVReQdp925EkMPqu",
   },
   {
-    name: "Uniswap V3",
+    name: "uniswap-v3",
     description: "Asdf",
     uri: "ipfs/QmbAgd4ccxYcbPCeDBb67SFybMZiNKQdCt32EzCEi5euh3",
+  },
+  {
+    name: "pileks-template-wasm-as",
+    description: "A sample wrap.",
+    uri: "ipfs/QmTb8db7K6fan8T4eXFhQghSbB9TJpUBoU8aQwJcuiJyEt",
   },
 ];

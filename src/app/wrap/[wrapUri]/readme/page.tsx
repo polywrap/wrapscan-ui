@@ -4,6 +4,7 @@ import { getDocsManifest } from "@/utils/getDocsManifest";
 import { decodeWrapUri } from "@/utils/wrapUri";
 import { getWrapFile } from "@/utils/getWrapFile";
 import { getWrapManifest } from "@/utils/getWrapManifest";
+import { defaultReadme } from "./default-readme";
 
 // Tailwind has a really nice base typography style which can be activated with the `prose` class
 // We can provide our own typography styling by simply editing the typography plugin:
@@ -18,32 +19,25 @@ export default async function Readme({
   const wrapManifest = await getWrapManifest(wrapUriDecoded);
   const docsManifest = await getDocsManifest(wrapUriDecoded);
 
-  if (!docsManifest || !docsManifest.homePage || !docsManifest.pages) {
-    return <div>No readme found</div>;
-  }
+  let readme: string | undefined;
 
-  const readme = await getWrapFile(
-    wrapUriDecoded,
-    "docs/" + docsManifest.pages[docsManifest.homePage].path
-  );
-
-  if (!readme) {
-    return <div>No readme found</div>;
+  if (docsManifest && docsManifest.readme) {
+    readme = await getWrapFile(wrapUriDecoded, "docs/" + docsManifest?.readme);
   }
 
   return (
     <div className="flex gap-12">
       <div className="grow">
         <ReactMarkdown className="prose prose-invert max-w-none">
-          {readme}
+          {readme ?? defaultReadme}
         </ReactMarkdown>
       </div>
       <div className="shrink-0 grow-0 basis-80">
         <WrapInformationWidget
           url={wrapUriDecoded}
           version={wrapManifest.version}
-          websiteUrl={docsManifest?.website}
-          repositoryUrl={docsManifest?.github}
+          websiteUrl={docsManifest?.websiteUrl}
+          repositoryUrl={docsManifest?.repositoryUrl}
         ></WrapInformationWidget>
       </div>
     </div>
