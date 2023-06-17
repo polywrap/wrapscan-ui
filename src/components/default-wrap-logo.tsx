@@ -1,12 +1,5 @@
-import defaultWrapLogo from "@/assets/default-wrap-logo.svg";
-import Image from "next/image";
+import WrapLogo from "@/assets/default-wrap-logo.svg";
 
 export default function DefaultWrapLogo({ className }: { className?: string }) {
-  return (
-    <Image
-      src={defaultWrapLogo}
-      alt="Default Wrap logo"
-      className={className}
-    ></Image>
-  );
+  return <WrapLogo className={className}></WrapLogo>;
 }
