@@ -32,7 +32,7 @@ export default async function Readme({
           {readme ?? defaultReadme}
         </ReactMarkdown>
       </div>
-      <div className="shrink-0 grow-0 basis-80">
+      <div className="hidden shrink-0 grow-0 basis-80 md:block">
         <WrapInformationWidget
           url={wrapUriDecoded}
           version={wrapManifest.version}

@@ -5,6 +5,8 @@ import { wraps } from "@/app/wraps";
 import { decodeWrapUri } from "@/utils/wrapUri";
 import { getWrapManifest } from "@/utils/getWrapManifest";
 import { getDocsManifest } from "@/utils/getDocsManifest";
+import MobileReadMore from "./mobile-read-more";
+import WrapInformationWidget from "@/components/wrap/wrap-information-widget";
 
 type WrapNavLinkProps = PropsWithChildren<LinkProps>;
 
@@ -38,15 +40,28 @@ export default async function WrapLayout({
   const docsManifest = await getDocsManifest(wrapUriDecoded);
 
   return (
-    <div className="mx-auto flex max-w-screen-xl flex-col gap-16 px-4 pt-8">
+    <div className="mx-auto flex max-w-screen-xl flex-col gap-12 px-4 pt-8 md:gap-16">
       <div className="flex flex-col gap-6">
         <h1 className="text-4xl font-bold text-polywrap-gray-50">
           {wrapManifest.name}
         </h1>
+
         {docsManifest && docsManifest.description && (
           <p className="text-polywrap-gray-200">{docsManifest.description}</p>
         )}
       </div>
+
+      <div className="md:hidden">
+        <MobileReadMore>
+          <WrapInformationWidget
+            url={wrapUriDecoded}
+            version={wrapManifest.version}
+            websiteUrl={docsManifest?.websiteUrl}
+            repositoryUrl={docsManifest?.repositoryUrl}
+          ></WrapInformationWidget>
+        </MobileReadMore>
+      </div>
+
       <div className="flex flex-col gap-12">
         <div className="flex gap-8 border-b border-polywrap-iris-800">
           <WrapNavLink href="readme">Readme</WrapNavLink>
