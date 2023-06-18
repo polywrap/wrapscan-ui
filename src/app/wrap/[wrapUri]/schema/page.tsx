@@ -19,8 +19,8 @@ export default async function Schema({
   const schema = renderSchema(wrapManifest.abi, false);
 
   return (
-    <div className="flex gap-12">
-      <div className="grow">
+    <div className="flex justify-between gap-12">
+      <div className="max-w-full overflow-hidden">
         <WrapSchemaRenderer schema={schema.trimStart()}></WrapSchemaRenderer>
       </div>
       <div className="hidden shrink-0 grow-0 basis-80 md:block">

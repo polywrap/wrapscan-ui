@@ -6,8 +6,16 @@ import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 const customVscDarkPlus: { [key: string]: React.CSSProperties } = {
   ...vscDarkPlus,
   ...{
-    'code[class*="language-"]': { fontSize: 16 },
-    'pre[class*="language-"]': { fontSize: 16 },
+    'code[class*="language-"]': {
+      ...vscDarkPlus['code[class*="language-"]'],
+      background: "none",
+      fontSize: 16,
+    },
+    'pre[class*="language-"]': {
+      ...vscDarkPlus['pre[class*="language-"]'],
+      background: "none",
+      fontSize: 16,
+    },
   },
 };
 
