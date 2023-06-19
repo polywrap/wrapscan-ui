@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import Navbar from "./navbar";
 import { ReactNode } from "react";
 import Footer from "./footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const colton = localFont({
   src: [
@@ -65,6 +66,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Navbar></Navbar>
         {children}
         <Footer></Footer>
+        <Analytics />
       </body>
     </html>
   );
