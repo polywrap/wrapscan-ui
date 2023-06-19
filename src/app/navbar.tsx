@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <div className="mx-auto flex max-w-screen-xl items-center justify-between gap-4 px-4 py-6">
       <Link href="/" className="flex items-center gap-4">
-        <PolywrapLogo></PolywrapLogo>
+        <PolywrapLogo className="h-9 w-9"></PolywrapLogo>
         <div className="flex flex-col">
           <span className="font-display font-bold">wrapscan</span>
           <span className="text-xxs text-polywrap-gray-200">by polywrap</span>

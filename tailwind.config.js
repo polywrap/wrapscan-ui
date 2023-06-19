@@ -41,6 +41,7 @@ module.exports = {
       backgroundImage: {
         "polywrap-card": "linear-gradient(271.11deg, rgba(13, 16, 71, 0.8) 0%, rgba(30, 37, 103, 0.8) 100%)",
         "polywrap-card-hover": "linear-gradient(271.11deg, rgba(13, 16, 71, 0.4) 0%, rgba(30, 37, 103, 0.4) 100%)",
+        "polywrap-rgb": "linear-gradient(135deg, #05d3fb 0%, #5361f8 14.58%, #d362df 41.15%, #f8ba26 67.19%, #49f128 85.42%, #05d3fb 100%)",
       }
     },
   },
