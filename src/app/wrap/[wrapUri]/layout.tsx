@@ -56,8 +56,8 @@ export default async function WrapLayout({
           <WrapInformationWidget
             url={wrapUriDecoded}
             version={wrapManifest.version}
-            websiteUrl={docsManifest?.websiteUrl}
-            repositoryUrl={docsManifest?.repositoryUrl}
+            websiteUrl={docsManifest?.website}
+            repositoryUrl={docsManifest?.repository}
           ></WrapInformationWidget>
         </MobileReadMore>
       </div>

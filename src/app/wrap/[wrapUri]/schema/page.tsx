@@ -27,8 +27,8 @@ export default async function Schema({
         <WrapInformationWidget
           url={wrapUriDecoded}
           version={wrapManifest.version}
-          websiteUrl={docsManifest?.websiteUrl}
-          repositoryUrl={docsManifest?.repositoryUrl}
+          websiteUrl={docsManifest?.website}
+          repositoryUrl={docsManifest?.repository}
         ></WrapInformationWidget>
       </div>
     </div>
