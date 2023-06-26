@@ -13,6 +13,8 @@ const customVscDarkPlus: { [key: string]: React.CSSProperties } = {
     },
     'pre[class*="language-"]': {
       ...vscDarkPlus['pre[class*="language-"]'],
+      marginTop: 0,
+      padding: 0,
       background: "none",
       fontSize: 16,
     },
