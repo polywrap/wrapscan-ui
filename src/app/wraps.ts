@@ -7,28 +7,33 @@ export type WrapHomepageItem = {
 
 export const wraps: WrapHomepageItem[] = [
   {
-    name: "ethereum-wrapper",
-    description: "Description",
-    uri: "ipfs/QmS4Z679ZE8WwZSoYB8w9gDSERHAoWG1fX94oqdWpfpDq3",
-  },
-  {
     name: "ens",
-    description: "Description",
-    uri: "ipfs/QmWG8NJnvGMCosxaUWuRna33MSDR331rByGTdy4EDsVjNL",
+    description: "Purchase & configure domains on the Ethereum Name Service",
+    uri: "ipfs/QmaWeZ4yf7hDnRN7Ri3o8iQMrQLxXM2asWJci3emmLXtwM",
   },
   {
-    name: "ipfs-http-client-as",
-    description: "Asdf",
-    uri: "ipfs/QmWC71YkXywceZVqwrDQ6BVYuu2FNnSVReQdp925EkMPqu",
+    name: "ipfs-http-client",
+    description: "Client library for the IPFS HTTP API",
+    uri: "ipfs/QmRiHpjJSqrE9ShiYLvqgE971tzvUR1Hfkehdk8UvHXELm",
   },
   {
     name: "uniswap-v3",
-    description: "Asdf",
-    uri: "ipfs/QmbAgd4ccxYcbPCeDBb67SFybMZiNKQdCt32EzCEi5euh3",
+    description: "Interact with the Uniswap V3 smart contracts in any environment",
+    uri: "ipfs/QmVmQ5v7EU6YxyWvoGjwpZ81Mo2cq1C5b17d5DFj4RL8Z2",
   },
   {
-    name: "pileks-template-wasm-as",
-    description: "A sample wrap.",
-    uri: "ipfs/QmYvoAzYYLbLeD1JRuBVJ75xGs7DcY1R1eTmbVFHgoL4su",
+    name: "safe-account-abstraction",
+    description: "Add safe account abstraction into any application",
+    uri: "ipfs/QmNVzGPg6ztrtn2o1J7ELLu43oBJDguiMzRMuRF6y7QcFy",
+  },
+  {
+    name: "safe-factory",
+    description: "Deploy new safes",
+    uri: "ipfs/QmSSPrGAGTDoMn9QTH4FjcoSGMHVmiUmpRRVnuhUpbgjNa",
+  },
+  {
+    name: "safe-manager",
+    description: "Interact with safes",
+    uri: "ipfs/QmaxuS9NtBX46EdAn4Vk2eAxZUhi8nA8N9czBhMPLtCxAe",
   },
 ];
