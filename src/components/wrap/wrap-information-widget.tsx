@@ -1,3 +1,4 @@
+import { Uri } from "@polywrap/client-js";
 import Link from "next/link";
 import { PropsWithChildren } from "react";
 
@@ -25,11 +26,22 @@ export default function WrapInformationWidget(
 ) {
   const { url, repositoryUrl, websiteUrl: homepageUrl, version } = props;
 
+  const polywrapUri = Uri.from(url);
+
   return (
     <div className="flex flex-col gap-6">
       <div>
         <InfoLabel>Wrap URL</InfoLabel>
-        <InfoText>{url}</InfoText>
+        {polywrapUri.authority === "ipfs" ? (
+          <Link
+            className="hover:underline"
+            href={`https://ipfs.io/ipfs/${polywrapUri.path}/`}
+          >
+            <InfoText>{url}</InfoText>
+          </Link>
+        ) : (
+          <InfoText>{url}</InfoText>
+        )}
       </div>
       {homepageUrl && (
         <div>
