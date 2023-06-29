@@ -34,8 +34,9 @@ export default function WrapInformationWidget(
         <InfoLabel>Wrap URL</InfoLabel>
         {polywrapUri.authority === "ipfs" ? (
           <Link
-            className="hover:underline"
             href={`https://ipfs.io/ipfs/${polywrapUri.path}/`}
+            target="_blank"
+            className="hover:underline"
           >
             <InfoText>{url}</InfoText>
           </Link>
