@@ -9,31 +9,32 @@ export const wraps: WrapHomepageItem[] = [
   {
     name: "ens",
     description: "Purchase & configure domains on the Ethereum Name Service",
-    uri: "ipfs/QmaWeZ4yf7hDnRN7Ri3o8iQMrQLxXM2asWJci3emmLXtwM",
+    uri: "ipfs/QmbESzCRArrazFff9EbDeZ44fmENBZfVBkG7AMrAvjevQL",
   },
   {
     name: "ipfs-http-client",
     description: "Client library for the IPFS HTTP API",
-    uri: "ipfs/QmRiHpjJSqrE9ShiYLvqgE971tzvUR1Hfkehdk8UvHXELm",
+    uri: "ipfs/QmNow41R8BTZj4spdfLVkMZHUna8Vs13MUt5aMGAX2ke7G",
   },
   {
     name: "uniswap-v3",
-    description: "Interact with the Uniswap V3 smart contracts in any environment",
-    uri: "ipfs/QmVmQ5v7EU6YxyWvoGjwpZ81Mo2cq1C5b17d5DFj4RL8Z2",
+    description:
+      "Interact with the Uniswap V3 smart contracts in any environment",
+    uri: "ipfs/QmUGTMYE1upBBFGh4TLMDR6BKWK3TtPLMdzAiuLdUeQYVD",
   },
   {
     name: "safe-account-abstraction",
     description: "Add safe account abstraction into any application",
-    uri: "ipfs/QmNVzGPg6ztrtn2o1J7ELLu43oBJDguiMzRMuRF6y7QcFy",
+    uri: "ipfs/QmUtw73JEfEpnL3DcgzWiWz1kHomVfgEGpo5s8UNd76quS",
   },
   {
     name: "safe-factory",
     description: "Deploy new safes",
-    uri: "ipfs/QmSSPrGAGTDoMn9QTH4FjcoSGMHVmiUmpRRVnuhUpbgjNa",
+    uri: "ipfs/QmR7yiQv5jULzZ8ysHbCtjMowLiuiv2hX6Z4DiyfdQd5Pp",
   },
   {
     name: "safe-manager",
     description: "Interact with safes",
-    uri: "ipfs/QmaxuS9NtBX46EdAn4Vk2eAxZUhi8nA8N9czBhMPLtCxAe",
+    uri: "ipfs/Qmf9mRhNvKN1wfN52VdiZkjQiRw1WWEBYnwkuwzFg1ZjQn",
   },
 ];
