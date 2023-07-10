@@ -9,7 +9,7 @@ export const wraps: WrapHomepageItem[] = [
   {
     name: "ethers",
     description: "Interact with the Ethereum Blockchain",
-    uri: "ipfs/QmfCQNSvBGG44V1fqgbiDE83F2auk58L9bSjrteBS9hfHm",
+    uri: "ipfs/QmNkwdHYHqCoepQPmaJvsRSN525a3WBAZMAKpdtsF4VtWG",
   },
   {
     name: "ens",
