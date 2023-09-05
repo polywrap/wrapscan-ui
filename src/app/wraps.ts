@@ -9,17 +9,17 @@ export const wraps: WrapHomepageItem[] = [
   {
     name: "ethers",
     description: "Interact with the Ethereum Blockchain",
-    uri: "ipfs/QmNkwdHYHqCoepQPmaJvsRSN525a3WBAZMAKpdtsF4VtWG",
+    uri: "wrapscan.io/polywrap/ethers@1.1.1",
   },
   {
     name: "ens",
     description: "Purchase & configure domains on the Ethereum Name Service",
-    uri: "ipfs/QmbESzCRArrazFff9EbDeZ44fmENBZfVBkG7AMrAvjevQL",
+    uri: "wrapscan.io/polywrap/ens@1.0.0",
   },
   {
     name: "ipfs-http-client",
     description: "Client library for the IPFS HTTP API",
-    uri: "ipfs/QmNow41R8BTZj4spdfLVkMZHUna8Vs13MUt5aMGAX2ke7G",
+    uri: "wrapscan.io/polywrap/ipfs-http-client@1.0.1",
   },
   {
     name: "uniswap-v3",
@@ -28,18 +28,18 @@ export const wraps: WrapHomepageItem[] = [
     uri: "ipfs/QmUGTMYE1upBBFGh4TLMDR6BKWK3TtPLMdzAiuLdUeQYVD",
   },
   {
-    name: "safe-account-abstraction",
-    description: "Add safe account abstraction into any application",
-    uri: "ipfs/QmUtw73JEfEpnL3DcgzWiWz1kHomVfgEGpo5s8UNd76quS",
+    name: "safe-account-abstraction-kit",
+    description: "Add Safe account abstraction into any application",
+    uri: "wrapscan.io/polywrap/safe-account-abstraction-kit@0.0.1",
   },
   {
-    name: "safe-factory",
-    description: "Deploy new safes",
-    uri: "ipfs/QmR7yiQv5jULzZ8ysHbCtjMowLiuiv2hX6Z4DiyfdQd5Pp",
+    name: "safe-relay-kit",
+    description: "Abstract users from gas fees - pay with ERC-20 tokens",
+    uri: "wrapscan.io/polywrap/safe-relay-kit@0.0.1",
   },
   {
-    name: "safe-manager",
-    description: "Interact with safes",
-    uri: "ipfs/Qmf9mRhNvKN1wfN52VdiZkjQiRw1WWEBYnwkuwzFg1ZjQn",
+    name: "safe-protocol-kit",
+    description: "Interact with Safe contracts",
+    uri: "wrapscan.io/polywrap/safe-protocol-kit@0.0.1",
   },
 ];
