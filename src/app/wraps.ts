@@ -14,7 +14,7 @@ export const wraps: WrapHomepageItem[] = [
   {
     name: "ens",
     description: "Purchase & configure domains on the Ethereum Name Service",
-    uri: "wrapscan.io/polywrap/ens@1.0.0",
+    uri: "wrapscan.io/polywrap/ens@1.0.1",
   },
   {
     name: "ipfs-http-client",
@@ -25,7 +25,7 @@ export const wraps: WrapHomepageItem[] = [
     name: "uniswap-v3",
     description:
       "Interact with the Uniswap V3 smart contracts in any environment",
-    uri: "ipfs/QmUGTMYE1upBBFGh4TLMDR6BKWK3TtPLMdzAiuLdUeQYVD",
+    uri: "wrapscan.io/polywrap/uniswap-v3@1.0.1",
   },
   {
     name: "safe-account-abstraction-kit",
