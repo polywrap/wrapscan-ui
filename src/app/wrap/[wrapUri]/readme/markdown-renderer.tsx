@@ -3,6 +3,7 @@
 import ReactMarkdown from "react-markdown";
 import { Prism } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import rehypeRaw from "rehype-raw";
 
 const customVscDarkPlus: { [key: string]: React.CSSProperties } = {
   ...vscDarkPlus,
@@ -38,6 +39,7 @@ export default function MarkdownRenderer({ readme }: { readme: string }) {
           );
         },
       }}
+      rehypePlugins={[rehypeRaw as any]}
     >
       {readme}
     </ReactMarkdown>
